@@ -1,0 +1,25 @@
+{
+  "id": "11-depth-anything",
+  "slug": "autodl-depth-anything-v2",
+  "name": "Depth Anything V2 深度估计",
+  "description": "上传图片生成相对深度灰度图，下载16位归一化PNG。",
+  "task": "depth-estimation",
+  "torch": true,
+  "requires_gpu": false,
+  "imports": ["torch", "transformers"],
+  "model_gb": 0.100,
+  "disk_gb": 2,
+  "gpu": "支持CPU或GPU。Small模型；建议4GB内存起测。",
+  "license": "Apache-2.0（Depth Anything V2 Small）",
+  "source": "https://github.com/DepthAnything/Depth-Anything-V2",
+  "models": {
+    "main": {
+      "kind": "hf",
+      "repo": "depth-anything/Depth-Anything-V2-Small-hf",
+      "revision": "5426e4f0f36572d16453bbda7a8389317b1bef99",
+      "required_files": ["config.json", "model.safetensors", "preprocessor_config.json"],
+      "allow_patterns": ["*.json", "*.safetensors", "LICENSE*", "README.md"]
+    }
+  },
+  "account": {"github": "zw2029181901", "autodl_user": "200211"}
+}
